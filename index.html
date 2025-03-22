@@ -3,6 +3,56 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Not Gonna Sugarcoat It</title>
+    <title>Teto</title>title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+        background-image: url('Fukkireta_kasane_teto');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+    </style>
   </head>
+      <body>
+        <h1>TETO!!!!</h1>
+            <button onclick="yeetTeto()">TETO</button>
+    <script>//Teehee stealing
+        function yeetTeto() {
+            const obj = document.createElement("img");
+            obj.className = "object";
+            obj.src = ""; // Change to whatever random object
+            document.body.appendChild(obj);
+            
+            obj.style.left = Math.random() * window.innerWidth + "px";
+            obj.style.top = "50px";
+            
+            const angle = Math.random() * 360;
+            const force = Math.random() * 500 + 300;
+            const xVelocity = Math.cos(angle) * force;
+            const yVelocity = Math.sin(angle) * force;
+            
+            let posX = parseFloat(obj.style.left);
+            let posY = 50;
+            
+            const yeetInterval = setInterval(() => {
+                posX += xVelocity * 0.05;
+                posY += yVelocity * 0.05;
+                obj.style.left = posX + "px";
+                obj.style.top = posY + "px";
+                
+                if (posY > window.innerHeight || posX > window.innerWidth || posX < 0) {
+                    clearInterval(yeetInterval);
+                    obj.remove();
+                }
+            }, 16);
+
+            const audio = new Audio("https://www.myinstants.com/en/instant/teto-ok-o-o-o-o-55469/?utm_source=copy&utm_medium=share");
+            audio.play();//add multiple audios maybe
+        }
+        
+    </script>
+      </body>
 </html>
